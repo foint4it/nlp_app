@@ -27,6 +27,7 @@ matplotlib.use("Agg")
 
 # External Utils
 from app_utils import *
+import spacy_utils
 
 
 # Fxn to Get Wordcloud
