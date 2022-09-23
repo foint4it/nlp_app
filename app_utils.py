@@ -1,7 +1,12 @@
 # Load NLP Pkgs
 import spacy
 from spacy import displacy
-nlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except: # If not present, we download
+    spacy.cli.download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+#nlp = spacy.load("en_core_web_sm")
 from textblob import TextBlob
 import pandas as pd 
 from collections import Counter
